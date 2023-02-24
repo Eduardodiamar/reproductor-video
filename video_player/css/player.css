@@ -1,27 +1,57 @@
 #player_wrapper
 {
  position:relative;
- width:400px;
- margin-left:300px;
+ width:33vw;
+ 
 }
 #video_player
 {
- width:400px;
+    width:33vw;
 }
 #player_controls
 {
+
  background-color:black;
 }
 input[type="image"]
 {
  float:left;
  height:20px;
- margin-left:2px;
- margin-right:5px;
- margin-top:2px;
+
 }
-#vol_img
-{
- margin-left:150px;
+img
+{ 
+ margin-left:15px;
  width:20px;
 }
+#play_button, #pause_button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* to ensure buttons appear above video */
+  }
+   
+   #change_vol{
+    width: 10vw;
+  }
+  #stop_button{
+    margin-top: 1px;
+    margin-left: 2px;
+  }
+  .header{
+    background-color:rgb(0, 0, 0);
+    height: 50px;
+  }
+  body{
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(3, 112, 39), black);
+  }
+  h1,p{
+    
+    color: white !important;
+  }
+ 
+  

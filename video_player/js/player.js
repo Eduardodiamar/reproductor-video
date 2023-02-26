@@ -5,7 +5,7 @@ var player;
 
 function startplayer() {
     player = document.getElementById('video_player');
-    player.controls = false;
+    // player.controls = false;
 }
 
 function play_vid() {

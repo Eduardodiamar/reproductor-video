@@ -1,28 +1,54 @@
 <html>
-   <head>
-      <script type="text/javascript" src="js/player.js"></script>
-      <link rel="stylesheet" type="text/css" href="css/player.css">
-      <meta charset="UTF-8">
-      <meta name="description" content="Video Player">
-      <meta name="keywords" content="HTML, CSS, JavaScript">
-      <meta name="author" content="Roberto">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Simple Video Player</title>
-   </head>
-   <body>
-      <div id="wrapper">
-         <div id='player_wrapper'>
-            <video id='video_player' width="auto" height="auto" controls>
-               <source src='video/sample.mp4' type='video/mp4'>
-            </video>
-            <div id='player_controls'>
-               <input type="image" src="images/play.png" onclick="play_vid()" id="play_button">
-               <input type="image" src="images/pause.png" onclick="pause_vid()" id="pause_button">
-               <input type="image" src="images/stop.png" onclick="stop_vid()" id="stop_button">
-               <img src="images/volume.png" id="vol_img">
-               <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
-            </div>
-         </div>
+
+<head>
+   <script type="text/javascript" src="js/player.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/player.css">
+   <meta charset="UTF-8">
+   <meta name="description" content="Video Player">
+   <meta name="keywords" content="HTML, CSS, JavaScript">
+   <meta name="author" content="Edu">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <title>Video Player</title>
+</head>
+
+<body class="container-fluid row p-0 m-0">
+
+   <div class="col-12 text-center header">Videoplayer</div>
+   <div class="col-1 col-sm-3 text-center lContent"></div>
+   <div class="col-10 col-sm-6 text-center content">
+
+      <div class="col tContent"></div>
+
+      <div class="video-container" onmouseover="showPlayPause()" onmouseleave="hiddeButtons()">
+         <video id='video_player' width="auto" height="auto" controls>
+            <source src='gorillas.mp4' type='video/mp4'>
+         </video>
+         <input type="image" src="images/play.png" onclick="play_vid()" id="play_button">
+         <input type="image" src="images/pause.png" onclick="pause_vid()" id="pause_button">
       </div>
-   </body>
+
+      <div class="col bContent video-description">
+         <h2>Gorillas</h2>
+         <p>The video exhibits gorillas in their natural habitat, going about their daily activities. It captures their
+            social interactions, grooming habits, and movements. The gorillas appear relaxed and at ease in their
+            surroundings, highlighting the beauty and complexity of their behavior.</p>
+            
+      </div>
+      <div class="row hashtags">
+         <a  class="col" href="https://www.youtube.com/results?search_query=gorilla" target="_blank"><p>#gorillas</p></a>
+         <a class="col" href="https://www.youtube.com/results?search_query=nature" target="_blank"><p>#nature</p></a>
+         <a class="col" href="https://www.youtube.com/results?search_query=wildlife" target="_blank"><p>#wildlife</p></a>
+         <a class="col" href="https://www.youtube.com/results?search_query=nocopyright" target="_blank"><p>#nocopyright</p></a>
+         <a class="col" href="https://www.youtube.com/results?search_query=creativecommons" target="_blank"><p>#creativecommons</p></a>
+         <a class="col" href="https://www.youtube.com/results?search_query=freevideo" target="_blank"><p>#freevideo</p></a>
+       
+       </div>
+   </div>
+   <div class="col-1 col-sm-3 text-center rContent"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 </html>
